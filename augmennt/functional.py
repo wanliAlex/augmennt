@@ -169,7 +169,7 @@ def resize(img, size, interpolation='BILINEAR'):
     if not (isinstance(size, int) or (isinstance(size, collections.Iterable) and len(size) == 2)):
         raise TypeError('Got inappropriate size arg: {}'.format(size))
     
-    w, h, =  size
+    #w, h, =  size
     if isinstance(size, int):
         # h, w, c = img.shape #this would defeat the purpose of "size"
         
