@@ -174,16 +174,20 @@ def resize(img, size, interpolation='BILINEAR'):
         # h, w, c = img.shape #this would defeat the purpose of "size"
         
         if (w <= h and w == size) or (h <= w and h == size):
+            print("mode1")
             return img
         if w < h:
+            print("mode2")
             ow = size
             oh = int(size * h / w)
             output = cv2.resize(img, dsize=(ow, oh), interpolation=_cv2_str2interpolation[interpolation])
         else:
+            print("mode3")
             oh = size
             ow = int(size * w / h)
             output = cv2.resize(img, dsize=(ow, oh), interpolation=_cv2_str2interpolation[interpolation])
     else:
+        print("mode4")
         output = cv2.resize(img, dsize=(size[1], size[0]), interpolation=_cv2_str2interpolation[interpolation])
     print("test_test")
     print(output.shape)
