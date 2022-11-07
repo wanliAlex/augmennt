@@ -170,6 +170,8 @@ def resize(img, size, interpolation='BILINEAR'):
         raise TypeError('Got inappropriate size arg: {}'.format(size))
     
     w, h =  img.shape[0], img.shape[1]
+    print("size=", size, "image_shape =", img.shape)
+    print(isinstance(size, int)
     if isinstance(size, int):
         # h, w, c = img.shape #this would defeat the purpose of "size"
         
