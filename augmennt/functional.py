@@ -185,6 +185,7 @@ def resize(img, size, interpolation='BILINEAR'):
             output = cv2.resize(img, dsize=(ow, oh), interpolation=_cv2_str2interpolation[interpolation])
     else:
         output = cv2.resize(img, dsize=(size[1], size[0]), interpolation=_cv2_str2interpolation[interpolation])
+    print(output.shape)
     
     return output
 
