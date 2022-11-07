@@ -50,7 +50,7 @@ def to_tensor(pic):
     if _is_numpy_image(pic):
         if len(pic.shape) == 2:
             pic = cv2.cvtColor(pic, cv2.COLOR_GRAY2RGB)
-        pic = to_rgb_bgr(pic.copy())
+        #pic = to_rgb_bgr(pic.copy())
         img = torch.from_numpy(pic.transpose((2, 0, 1))).contiguous()
         # backward compatibility
         if isinstance(img, torch.ByteTensor) or img.max() > 127 or img.dtype==torch.uint8:
