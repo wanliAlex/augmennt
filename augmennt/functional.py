@@ -171,7 +171,7 @@ def resize(img, size, interpolation='BILINEAR'):
     
     w, h =  img.shape[0], img.shape[1]
     print("size=", size, "image_shape =", img.shape)
-    print(isinstance(size, int)
+    print(isinstance(size, int))
     if isinstance(size, int):
         # h, w, c = img.shape #this would defeat the purpose of "size"
         
